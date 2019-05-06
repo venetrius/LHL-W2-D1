@@ -3,7 +3,7 @@ var http = require('https');
 function getHTML (options, callback) {
  data = "";
 
-  http.get(requestOptions, function (response) {
+  http.get(options, function (response) {
     response.setEncoding("utf-8");
     response.on("data",function(chunk){
       data += chunk;
